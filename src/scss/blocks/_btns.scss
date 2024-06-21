@@ -1,0 +1,107 @@
+.swiper-button-next::after, .swiper-button-prev::after{
+	display: none !important;
+}
+.red__btn, .request__btn{
+width: 269px;
+height: 57px;
+margin: 0 auto;
+display: block;
+
+font-weight: 700;
+font-size: 20px;
+background-color: var(--red-color);
+@include notebook {
+	 width: clamp(9.063rem, -4.322rem + 20.91vw, 14.5rem); //232/165 1440/1024
+	 height: clamp(2rem, -1.846rem + 6.01vw, 3.563rem); //57/32 1440/1024
+	 font-size: clamp(1rem, 0.385rem + 0.96vw, 1.25rem); //20/16 1440/1024
+}
+}
+
+
+.swiper-button-next::after, .swiper-button-prev::after{
+	display: none !important;
+
+}
+
+.swiper-button-wrapper {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	min-width: 320px;
+	height:123px;
+	display: grid;
+	justify-content: center;
+	z-index: 10;
+
+	@include tablet {
+	grid-template-columns: 50px auto 50px;
+	grid-template-rows: 56px;
+	}
+}
+.swiper-pagination__services {
+	padding-top:24px !important;
+	margin:0 auto !important;
+	@include tablet {
+		 grid-column: 2 / 3;
+	}
+	
+}
+.swiper-pagination-bullet {
+	width: 9px !important;
+	height: 9px !important;
+	opacity: 1 !important;
+	background: rgba(255, 255, 255, 0.22)  !important;
+	@include notebook {
+		 width: clamp(0.313rem, 0.027rem + 0.6vw, 0.563rem) !important; //9/5 1440/768
+		 height: clamp(0.313rem, 0.027rem + 0.6vw, 0.563rem)!important;
+	}
+	&-active {
+		background: rgba(255, 255, 255, 1) !important;
+		box-shadow: 0 0 17px 17px rgba(255, 255, 255, 0.2);
+	}
+	&:not(:last-child)	{
+		margin: 0 34px 0 0!important;
+		@include notebook {
+			 margin-right: clamp(1.25rem, 0.679rem + 1.19vw, 1.75rem) !important; //28/20 1440/1200
+		}
+	}
+}
+.swiper-button-prev__services, .swiper-button-next__services {
+	margin-top: auto !important;
+	bottom:10px;
+	@include tablet {
+		 margin-top: unset !important;
+		 bottom:unset !important;
+	}
+}
+.swiper-button-prev__services, .swiper-button-next__services {
+	margin-left: 40px !important;
+	@include tablet {
+		position: static !important;
+		margin-left:unset !important;
+		margin-right: unset !important;
+		margin-top: 13px !important;
+	}
+}
+.swiper-button-prev__services {
+	@include tablet {
+		 grid-column: 1 / 2 !important;
+		 grid-row: 1 / 2;
+	}
+	
+
+}
+.swiper-button-next__services {
+	margin-right: 40px !important;
+	@include tablet {
+	margin: 13px 0 0 auto !important;
+		 grid-column: 3 / 4 !important;
+		 grid-row: 1 / 2;
+	}
+}
+
+
+.swiper-button-next::after, .swiper-button-prev::after{
+	display: none !important;
+}

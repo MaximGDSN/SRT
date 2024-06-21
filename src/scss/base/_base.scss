@@ -1,0 +1,49 @@
+
+
+
+html {
+	scroll-behavior: smooth;
+	background-color: #030202;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-color);
+	font-family: var(--font-family);
+	text-wrap: balance;
+	overflow-x: hidden;
+}
+section {
+	width: 100vw;
+}
+.container {
+	max-width: var(--container-width);
+	padding: var(--container-padding);
+	margin: 0 auto;
+	@include notebook {
+		padding: 0 120px;
+	}
+	@include tablet {
+		 padding: 0 100px;
+	}
+	@include tablet1024 {
+		 padding: 0 clamp(1.438rem, -8.451rem + 20.6vw, 7rem); //112/23 1200/768
+	}
+	@include mobile768 {
+		 padding: 0 23px;
+	}
+	@include mobile440 {
+		 padding:0 16px;
+	}
+}
+// .main {
+// 	margin:0 auto;
+// }
+img {
+	display: block;
+}
+
+a {
+	color: var(--link-color);
+}
+

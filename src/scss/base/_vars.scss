@@ -1,0 +1,23 @@
+:root {
+	--container-width: 1440px;
+	--container-padding: 0 20px;
+
+	--font-family: "PT Sans Caption", sans-serif;
+	--font-logo: "Molot", sans-serif;
+	--font-title: "Verdana", sans-serif;;
+
+	--page-bg: #030202;
+	--text-color: #fff;
+	--red-color: #900000;
+	--link-color: #fff;
+
+
+   //  --laptop-size: 1199px;
+	// --tablet-size: 959px;
+	// --mobile-size: 599px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}

@@ -1,0 +1,30 @@
+<div class="form">
+	<form action="sender.php" method="post" class="form__request">
+
+		<div class="request__title">Свяжитесь с нами</div>
+
+		<div class="request__group">
+			<div class="name">Ваше имя</div>
+			<input type="text" class="request__	name" name="name" placeholder="Имя" required>
+		</div>
+
+		<div class="request__group">
+			<div class="phone">Номер телефона</div>
+			<input type="text" class="request__phone" name="phone" placeholder="Телефон">
+		</div>
+
+		<div class="request__group">
+			<div class="car">Марка автомобиля</div>
+			<input type="text" class="request__car" name="car" placeholder="Марка автомобиля" required>
+		</div>
+	
+		<div class="request__group">
+			<div class="question">Ваш вопрос</div>
+			<textarea name="text" id="" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+		</div>
+
+		<button type="button" class="send-form">Отправить форму</button>
+
+		<div class="request__status"></div>
+	</form>
+</div>	

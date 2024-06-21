@@ -1,0 +1,25 @@
+<div class="swiper swiper__services">
+
+	<div class="swiper-button-wrapper">
+		<div class="swiper-pagination__services"></div>
+
+			<div class="swiper-button-prev swiper-button-prev__services">
+				<svg class="icon icon--arrow-left">
+					<use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
+				</svg>
+			</div>
+	
+			<div class="swiper-button-next swiper-button-next__services">
+				<svg class="icon icon--arrow-right">
+					<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+				</svg>
+			</div>
+			
+		</div>
+
+	<div class="swiper-wrapper swiper-wrapper__services">
+		@@loop('services-swiper__content.html', './data/services.json')
+	</div>
+
+
+ </div>

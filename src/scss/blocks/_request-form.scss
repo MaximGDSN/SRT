@@ -1,0 +1,70 @@
+.form {
+	width: 901px;
+	background-color: #000;
+	padding:34px 46px 7px 46px;
+}
+
+.form__request {
+	display: flex;
+	flex-direction: column;
+	gap:16px 0;
+	input, textarea {
+		background-color: #d4d4d4;
+		height: 58px;
+		width: 564px;
+		padding-left:10px;
+		color:#000;
+		font-size: 16px;
+		&:hover {
+			outline: 2px solid #808080 !important;
+			outline-offset: -1px;
+		}
+		&:focus {
+			outline:3px solid #808080 !important;
+			outline-offset: -1px;
+		}
+	}
+	textarea	{
+		height: unset;
+		padding-top: 10px;
+	}
+}
+
+.request__group {
+	display: flex;
+	justify-content: space-between;
+	div {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	}
+}
+.request__title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 150%;
+	text-align: center;
+	
+	padding-bottom:24px;
+	}
+.request__name {
+
+}
+.request__car {
+
+}
+.request__phone {
+
+}
+.request__email {
+	
+}
+.send-form {
+	width: 565px;
+	height: 58px;
+	margin:0 auto;
+	display: inline-block;
+	background-color: #900000;
+}
+.request__status {
+}

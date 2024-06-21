@@ -1,0 +1,126 @@
+.header {
+ margin: 0 auto;
+ width: 100vw;
+}
+
+.header__row {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	
+	padding: 21px 0 23px 0;
+	height: 140px;
+	margin-top: auto;
+	@include notebook {
+		 height: clamp(4.625rem, -4.438rem + 12.08vw, 6.438rem); //103/74 1440/1200
+		 padding:10px 0 0 0;
+	}
+	@include tablet {
+		 height: 63px;
+		 padding-top:6px;
+		 flex-direction: row;
+	}
+}
+.header__logo {
+	font-weight: 700;
+	line-height: 100%;
+	font-family: var(--font-logo);
+	font-size: 60px;
+	letter-spacing: 0.05em;
+	text-wrap: nowrap;
+	margin-bottom: 5px;
+	@include notebook {
+		font-size: clamp(2.5rem, -0.625rem + 4.17vw, 3.125rem); //50/40 1440/1200
+		 font-weight: 400;
+		 letter-spacing: unset;
+	}
+	@include tablet {
+		height: 57px;
+		 font-size: 50px;
+		 position: absolute;
+		 display: flex;
+		 justify-content: center;
+		align-items: center;
+		 width: 100%;
+		 margin-bottom: 0;
+		 
+	}
+	@include mobile768 {
+		 font-size: 35px;
+		 position: static;
+	}
+}
+.header__number {
+	font-weight: 700;
+	font-size: 30px;
+	margin-bottom: 12.5px;
+	text-align: center;
+	@include notebook {
+		 font-size: clamp(1.188rem, -0.688rem + 2.5vw, 1.563rem); //25/19 1440/1200
+	}
+	@include tablet {
+		 font-size: 25px;
+		 display: flex;
+		 align-items: center;
+		 margin-bottom:unset;
+	}
+	@include mobile768 {
+		 font-size: 20px;
+		 display: none;
+	}
+}
+
+.header__logo-number {
+	@include tablet {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	}
+}
+	
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav__list {
+	display: flex;
+	gap:0 55px;
+	align-items: center;
+
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 24px;
+	@include notebook {
+		 font-size: clamp(1rem, -0.25rem + 1.67vw, 1.25rem); //20/16 1440/1200
+		 gap: 0 clamp(2.875rem, 0.063rem + 3.75vw, 3.438rem); //55/48 1440/1200
+	}
+	@include tablet {
+		 display: none;
+	}
+}
+
+.header__adress {
+font-weight: 700;
+font-size: clamp(1.125rem, -0.75rem + 2.5vw, 1.5rem); //24/18 1440/1200
+text-align: right;
+width: 178px;
+margin-top:3px;
+	@include notebook {
+		width: clamp(8.438rem, -5rem + 17.92vw, 11.125rem); //178/135 1440/1200
+	}
+	@include tablet {
+		 width: unset;
+		 padding-left: 40px;
+		 position: relative;
+		 &::before {
+			content: "";
+			position: absolute;
+			background-image: url(./../../img/services/location-nav.svg);
+			width: 30px;
+			height: 31px;
+			left:0;
+			top:-6px;
+		 }
+	}
+}
