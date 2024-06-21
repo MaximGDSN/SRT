@@ -12,7 +12,7 @@ font-size: 20px;
 background-color: var(--red-color);
 @include notebook {
 	 width: clamp(9.063rem, -4.322rem + 20.91vw, 14.5rem); //232/165 1440/1024
-	 height: clamp(2rem, -1.846rem + 6.01vw, 3.563rem); //57/32 1440/1024
+	 min-height: clamp(2rem, -1.846rem + 6.01vw, 3.563rem); //57/32 1440/1024
 	 font-size: clamp(1rem, 0.385rem + 0.96vw, 1.25rem); //20/16 1440/1024
 }
 }
@@ -33,10 +33,14 @@ background-color: var(--red-color);
 	display: grid;
 	justify-content: center;
 	z-index: 10;
-
 	@include tablet {
+	height: auto;
 	grid-template-columns: 50px auto 50px;
-	grid-template-rows: 56px;
+	grid-template-rows: auto;
+	align-items: start;
+	@include mobile768 {
+		grid-template-columns: 30px auto 30px;
+	}
 	}
 }
 .swiper-pagination__services {
@@ -44,9 +48,11 @@ background-color: var(--red-color);
 	margin:0 auto !important;
 	@include tablet {
 		 grid-column: 2 / 3;
+			}
+	@include mobile768 {
+		 padding-top: 18px !important;
 	}
-	
-}
+	}
 .swiper-pagination-bullet {
 	width: 9px !important;
 	height: 9px !important;
@@ -56,9 +62,19 @@ background-color: var(--red-color);
 		 width: clamp(0.313rem, 0.027rem + 0.6vw, 0.563rem) !important; //9/5 1440/768
 		 height: clamp(0.313rem, 0.027rem + 0.6vw, 0.563rem)!important;
 	}
+	@include mobile768 {
+		 width: clamp(0.219rem, 0.152rem + 0.33vw, 0.313rem) !important; //5/3.5 768/320
+		 height: clamp(0.219rem, 0.152rem + 0.33vw, 0.313rem) !important;
+	}
 	&-active {
 		background: rgba(255, 255, 255, 1) !important;
 		box-shadow: 0 0 17px 17px rgba(255, 255, 255, 0.2);
+		@include mobile768 {
+			box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2);
+		}
+	}
+	&:last-child {
+		margin:0 !important;
 	}
 	&:not(:last-child)	{
 		margin: 0 34px 0 0!important;
@@ -71,8 +87,12 @@ background-color: var(--red-color);
 	margin-top: auto !important;
 	bottom:10px;
 	@include tablet {
+		width: clamp(0.688rem, 0.46rem + 1.14vw, 1.313rem) !important; //21/11 to 320
+		height: clamp(0.688rem, 0.506rem + 0.91vw, 1.188rem) !important; //19/11 to 320
 		 margin-top: unset !important;
 		 bottom:unset !important;
+		 display: flex;
+		 align-self: end;
 	}
 }
 .swiper-button-prev__services, .swiper-button-next__services {
@@ -81,7 +101,7 @@ background-color: var(--red-color);
 		position: static !important;
 		margin-left:unset !important;
 		margin-right: unset !important;
-		margin-top: 13px !important;
+		// margin-top: 24px !important;
 	}
 }
 .swiper-button-prev__services {
@@ -89,13 +109,13 @@ background-color: var(--red-color);
 		 grid-column: 1 / 2 !important;
 		 grid-row: 1 / 2;
 	}
-	
-
 }
 .swiper-button-next__services {
 	margin-right: 40px !important;
 	@include tablet {
-	margin: 13px 0 0 auto !important;
+	// margin: 24px 0 0 auto !important;
+		margin-left:auto !important;
+		margin-right: unset !important;
 		 grid-column: 3 / 4 !important;
 		 grid-row: 1 / 2;
 	}

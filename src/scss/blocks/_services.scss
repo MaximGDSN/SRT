@@ -27,15 +27,17 @@
 		 width: clamp(27.875rem, -26.813rem + 72.92vw, 38.813rem); //621/446 1440/1200
 		 height: clamp(27.438rem, -26.625rem + 72.08vw, 38.25rem); //612/439
 	}
+	@include mobile768 {
+		 width: clamp(12.375rem, 1.304rem + 55.36vw, 27.875rem); //446/198 768/320
+		 height: clamp(12.188rem, 1.295rem + 54.46vw, 27.438rem); //439/195 
+	} 
 }
 
 .services__title {
 	display: inline-block;
-	height: 80px;
 	padding:0px 20px;
 }
 .services__subtitle {
-	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 130%;
@@ -45,6 +47,15 @@
 	position: relative;
 	@include notebook {
 		 margin:20px 0 0 0;
+		 font-size: 20px;
+		 margin-top:20px;
+	}
+	@include tablet {
+		 font-size: 18px;
+	}
+	@include mobile768 {
+		 font-size: clamp(0.938rem, 0.804rem + 0.67vw, 1.125rem); //18/15 to 320
+		 margin-top:30px;
 	}
 
 }
@@ -79,19 +90,31 @@
 	@include notebook {
 		 margin-top: 115px !important;
 	}
+	@include mobile768 {
+		 margin-top:70px !important;
+	}
 }
 
 .services__slide-inner {
 	max-width: 436px;
 	max-height: 424px;
 	border-radius: 19px;
+
 	padding: 40px 30px 55px 30px;
 	background: rgb(3, 2, 2, 0.52); 
+	margin:0 auto !important;
+	display: flex;
+	flex-direction: column;
 	@include notebook {
 		max-width: clamp(15.625rem, -3.452rem + 29.81vw, 23.375rem); //374//250 //1440/1024
 		max-height: clamp(18.75rem, 5rem + 18.33vw, 21.5rem); //344/300 1440/1200
 		 padding:30px 15px 55px 15px
 	}
+	@include mobile768 {
+		height:270px;
+		 padding:20px 15px 30px 15px;
+	}
+
 }
 
 .services__item-title {
@@ -115,6 +138,7 @@
 	@include notebook {
 		 font-size: clamp(0.75rem, -0.173rem + 1.44vw, 1.125rem); //18/12 1440/1024
 	}
+
 }
 .services__item-price {
 
@@ -125,8 +149,12 @@
 	margin:20px 0 20px 0;
 	@include notebook {
 		 font-size: clamp(0.938rem, 0.476rem + 0.72vw, 1.125rem);  //18/15 1440/1024
-
 	}
+	@include mobile768 {
+		margin-top:auto;
+	}
+
+
 }
 .services__item-price-text {
 }

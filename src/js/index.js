@@ -31,41 +31,33 @@ const swiper = new Swiper('.swiper__services', {
 		},
 	},
 	breakpoints: {
-		320: {
+		100: {
 		slidesPerView:1,
 		creativeEffect: {
 			prev:{
-				translate: ["-100%", -30, 0],
+				translate: ["-100%", -24, 0],
 			},
 			next: {
-				translate: ["100%", -30, 0],
+				translate: ["100%", -24, 0],
 			},
 		},
 		},
-		320: {
-			slidesPerView:1,
+		500: {
+			slidesPerView:2,
+			centeredSlides:false,
 			creativeEffect: {
 				prev:{
-					translate: ["-100%", -30, 0],
+						translate: ["-100%", 0, 0],
 				},
 				next: {
-					translate: ["100%", -30, 0],
+					translate: ["100%", 0, 0],
 				},
+				
 			},
 			},
-			500: {
-				slidesPerView:2,
-				creativeEffect: {
-					prev:{
-						translate: ["-100%", 0, 0],
-					},
-					next: {
-						translate: ["100%", 0, 0],
-					},
-				},
-				},
 		768: {
 			slidesPerView:3,
+			centeredSlides: true,
 			creativeEffect: {
 				prev:{
 					translate: ["-100%", -60, 0],
