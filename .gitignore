@@ -2,3 +2,5 @@ node_modules
 
 .webp
 .DS_Store
+.Заметки по сборке.md
+.package-lock.json
