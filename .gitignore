@@ -1,6 +1,11 @@
-node_modules
 
-.webp
-.DS_Store
-.Заметки по сборке.md
-.package-lock.json
+docs
+gulp
+node_modules
+src
+gulpfile.js
+Заметки по сборке.md
+package-lock.json
+package.json
+readme.md
+webpack.config.js
