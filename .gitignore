@@ -2,3 +2,4 @@ node_modules
 .webp
 Заметки по сборке.md
 readme.md
+.Ds_Store
