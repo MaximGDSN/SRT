@@ -104,7 +104,7 @@
 		top: 44%;
 			@include mobile768 {
 				width: clamp(2.188rem, 0.93rem + 4.57vw, 3.125rem); //50/35
-				background-image: url(./../../img/about/about-line440.svg);
+				background-image: url(./../../img/about/mobile-about-line.svg);
 			}
 		}
 			@extend %about__aside-line;

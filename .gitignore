@@ -1,4 +1,4 @@
-
+.vscode
 docs
 gulp
 node_modules
@@ -9,4 +9,3 @@ package-lock.json
 package.json
 readme.md
 webpack.config.js
-.vscode
