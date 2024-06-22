@@ -102,11 +102,13 @@
 		height: 11px;
 		left:-2px;
 		top: 44%;
+		@media (width:767px) {
+
+		}
 			@include mobile768 {
 				width: clamp(2.188rem, 0.93rem + 4.57vw, 3.125rem); //50/35
-			}
-			@media (max-width: 767px) {
-				background-image: url(./../../img/about/mobile-about-line.svg);
+				background-image: url(./../img/about/mobile-about-line.svg);
+				width: 30px;
 			}
 		}
 			@extend %about__aside-line;
@@ -114,10 +116,8 @@
 	@include tablet1024 {
 		 max-width: 460px;
 	}
+
 }
-
-	
-
 .about__p-3 p{
 	&::after {
 		height:calc(44% + 5.5px);
