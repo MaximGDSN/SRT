@@ -1,0 +1,122 @@
+// Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper
+.section-examples {
+	padding:85px 0 50px 0;
+}
+.container {
+}
+.title__wrapper-examples {
+	.line-left, .line-right {
+		display: none;
+	}
+}
+.examples__grid {
+	display: grid;
+	grid-template-columns: 650px 100px 650px;
+	grid-template-rows: 350px 100px 350px;
+	// grid-template-columns: 46.42% 53.58%;
+	// grid-template-rows: 43.75% 56.25%;
+}
+.examples__col1-row1 {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	&::before {
+		content: "До";
+		position: absolute;
+		right:0;
+		bottom:50%;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg) translateY(-50%);
+		font-size: 43px;
+		font-weight: 700;
+		line-height: 130%;
+	}
+}
+
+
+.examples__subtitle {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+}
+.examples__before {
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+	overflow: hidden;
+	position: relative;
+}
+.swiper-wrapper {
+
+}
+.examples__after {
+	overflow: hidden;
+	grid-column:  1 / 3;
+	grid-row: 2 / 4;
+	z-index: 5;
+}
+.examples__desc {
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+	padding:63px 0 0 89px;
+	&:before  {
+		content: "После";
+		position: absolute;
+		left:0;
+		top:50%;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg) translateY(50%);
+
+		font-size: 43px;
+		font-weight: 700;
+		line-height: 130%;
+	}
+	.swiper-wrapper {
+		overflow: hidden;
+	}
+}
+.examples__btns-wrapper {
+	grid-column:  1 / 2;
+	grid-row: 1 / 2;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.icon {
+}
+.icon--arrow-left {
+}
+.swiper-pagination__examples {
+}
+.swiper-button-next {
+}
+
+// Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper
+
+// Example SLides Example SLides  Example SLides  Example SLides  Example SLides 
+.swiper-slide {
+}
+.examples__swiper-slide {
+	position: relative;
+
+}
+.examples__slide-before {
+
+}
+.examples__slide-after {
+
+}
+.examples__desc-wrapper {
+	text-align: left;
+	font-size: 24px;
+	line-height: 150%;
+	font-weight: 400;
+}
+.examples__desc-title {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.examples__desc-text {
+
+}
+// Example SLides Example SLides  Example SLides  Example SLides  Example SLides 

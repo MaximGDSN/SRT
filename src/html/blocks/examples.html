@@ -1,0 +1,51 @@
+<section class="section-examples">
+	<div class="container">
+		<div class="examples__grid">
+
+		<div class="examples__col1-row1">
+
+			<div class="title__wrapper title__wrapper-examples">
+				<div class="line-left"></div>
+				<h1 class=" title example__title">ПРИМЕРЫ НАШИХ<br>РАБОТ</h1>
+				<div class="line-right"></div>
+			</div>
+
+			<h3 class="examples__subtitle">Лучшая награда для нас — благодарность<br> довольных клиентов</h3>
+			<div class="examples__btns-wrapper">
+				<div class="examples__btn-prev">
+					<svg class="icon icon--arrow-left">
+						<use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
+					</svg>
+				</div>
+				<div class="examples__pagination"></div>
+				<div class="examples__btn-next">
+					<svg class="icon icon--arrow-right">
+						<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+					</svg>
+				</div>
+			</div>
+				
+			</div>
+			
+
+			<div class="examples__before">
+				<div class="swiper-wrapper">
+					@@loop('./blocks/examples__before.html', './data/examples-before.json')
+				</div>
+			</div>
+
+			<div class="examples__after">
+				<div class="swiper-wrapper">
+					@@loop('./blocks/examples__after.html', './data/examples-after.json')
+				</div>
+			</div>
+
+			<div class="examples__desc">
+				<div class="swiper-wrapper">
+					@@loop('./blocks/examples__desc.html', './data/examples-desc.json')
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
