@@ -121,7 +121,31 @@ background-color: var(--red-color);
 	}
 }
 
-
 .swiper-button-next::after, .swiper-button-prev::after{
 	display: none !important;
 }
+
+//Example Buttons Example Buttons Example Buttons Example Buttons
+.examples__btns-wrapper {
+justify-content: center;
+align-items: center;
+margin-top:auto;
+margin-bottom:25px;
+gap:0 46px;
+}
+.examples__btn-prev {
+}
+.examples__pagination {
+	width: unset !important;
+	.swiper-pagination-bullet {
+		background: #fff !important;
+		&-active {
+			background: var(--red-color) !important;
+		}
+	}
+}
+.examples__btn-next {
+}
+
+
+//Example Buttons Example Buttons Example Buttons Example Buttons

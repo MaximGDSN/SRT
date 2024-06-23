@@ -31,3 +31,22 @@
 .services__title {
 	line-height: 100%;
 }
+
+.title__wrapper-examples {
+	justify-content: unset;
+	.line-left, .line-right {
+		display: none;
+	}
+}
+.line-left {
+}
+.title {
+}
+.example__title {
+	padding:0;
+	margin-bottom:14px;
+	line-height: 120%;
+	transform: translateY(-11%);
+}
+.line-right {
+}
