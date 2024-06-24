@@ -1,77 +1,205 @@
 // Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper
 .section-examples {
 	padding:85px 0 50px 0;
+	margin-bottom: 500px;
 }
 .container {
 }
-.title__wrapper-examples {
-	.line-left, .line-right {
-		display: none;
-	}
-}
+
 .examples__grid {
 	display: grid;
-	grid-template-columns: 650px 100px 650px;
+	grid-template-columns:650px 100px 650px;
 	grid-template-rows: 350px 100px 350px;
-	// grid-template-columns: 46.42% 53.58%;
-	// grid-template-rows: 43.75% 56.25%;
+	@include notebook {
+		grid-template-columns: 
+		clamp(28.438rem, -9.251rem + 50.21vw, 35.938rem) //575/455 /1440/1201
+		50px 
+		clamp(28.438rem, -9.251rem + 50.21vw, 35.938rem);
+		grid-template-rows: 
+		clamp(14.063rem, 0.558rem + 17.99vw, 16.75rem) //268/225 1440/1201
+		 50px 
+		clamp(14.063rem, 0.558rem + 17.99vw, 16.75rem); //268/225 1440/1201
+	}
+	@include tablet {
+		grid-template-columns:482px 58px 402px 58px;
+		grid-template-rows: 47px 195px 39px 195px;
+		grid-template-columns:
+		clamp(18.063rem, -3.382rem + 44.68vw, 30.125rem)  //482/289 1200/768
+		clamp(1.938rem, -1.063rem + 6.25vw, 3.625rem) //58/31 
+		clamp(23.125rem, 19.569rem + 7.41vw, 25.125rem)  //402/370 
+		clamp(1.938rem, -1.063rem + 6.25vw, 3.625rem); //58/31
+		grid-template-rows: 
+		auto //47/78 1200/768
+		clamp(12.5rem, 13.056rem + -1.16vw, 12.188rem) //195/200
+		clamp(1.938rem, 1.049rem + 1.85vw, 2.438rem)  //39/31
+		clamp(12.5rem, 13.056rem + -1.16vw, 12.188rem); //195/200
+	}
+	@include mobile768 { //to 320
+		 grid-template-columns: 
+		 clamp(2.813rem, -3.228rem + 30.2vw, 11.25rem) //180/45
+		 clamp(12.313rem, 5.422rem + 34.45vw, 21.938rem) //351/197
+		 clamp(2.813rem, -3.228rem + 30.2vw, 11.25rem); //180/45
+		 grid-template-rows: 
+		 clamp(9.875rem, 7.996rem + 9.4vw, 12.5rem)  //200/158
+		 clamp(8rem, 3.884rem + 20.58vw, 13.75rem) //220/128
+		 clamp(0.688rem, -0.61rem + 6.49vw, 2.5rem)  //40/11
+		 clamp(8rem, 3.884rem + 20.58vw, 13.75rem); //220/128
+	}
 }
 .examples__col1-row1 {
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	&::before {
-		content: "До";
-		position: absolute;
-		right:0;
-		bottom:50%;
-		writing-mode: vertical-lr;
-		transform: rotate(180deg) translateY(-50%);
-		font-size: 43px;
-		font-weight: 700;
-		line-height: 130%;
+	// justify-content: space-between;
+	@include tablet {
+		 grid-column: 1 / 5;
+		 grid-row: 1 / 3;
+		 display: grid;
+		 grid-template-columns: 
+		 clamp(18.063rem, -3.382rem + 44.68vw, 30.125rem)  //482/289 1200/768 
+		 auto;  
+		 grid-template-rows: 
+		auto //47/78 1200/768
+		clamp(12.5rem, 13.056rem + -1.16vw, 12.188rem) //195/200
+		clamp(1.938rem, 1.049rem + 1.85vw, 2.438rem)  //39/31
+	}
+	@include mobile768 {
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+		display: flex;
 	}
 }
-
 
 .examples__subtitle {
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 150%;
+	padding-right: 30px;
+	@include notebook {
+		 font-size: clamp(1.25rem, -0.006rem + 1.67vw, 1.5rem); //24/20 1440/1201
+	}
+	@include tablet {
+		 grid-column: 1 / 2;
+		 grid-row: 2 / 3;
+		 margin-top:30px;
+		 padding-right: 0px;
+	}
+	@include mobile768 {
+		font-size: clamp(0.938rem, 0.714rem + 1.12vw, 1.25rem); //20/15 767/320
+		margin-top: 15px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	br {
+		@include mobile768 {
+			 display: none;
+		}
+	}
+}
+.examples__before--wrapper {
+	position: relative;
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;	
+	@include tablet {
+		grid-column: 3 / 5;
+		grid-row: 2 / 4
+	}
+	@include mobile768 {
+		 grid-column: 2 / 4;
+		 grid-row: 2 / 4;
+	}
+	&::before {
+		content: "До";
+		position: absolute;
+		left:-8%;
+		bottom:60%;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg) translateY(-50%);
+		font-size: clamp(1.563rem, -1.207rem + 4.33vw, 2.688rem); //43/25 1440/1024
+		font-weight: 700;
+		line-height: 130%;
+		@include tablet {
+			 left: -10%;
+		}
+		@include tablet1024 {
+			 left:-8%;
+		}
+		@include mobile768 {
+			 font-size: clamp(1.25rem, 1.026rem + 1.12vw, 1.563rem); //25/20 to 320
+			 left:-8%;
+		}
+		@include mobile440 {
+			 left:-11%;
+		}
+	}
 }
 .examples__before {
-	grid-column: 2 / 4;
-	grid-row: 1 / 3;
 	overflow: hidden;
+	height:100%;
+	.swiper-wrapper {
+		.swiper-slide {
+			backface-visibility: unset !important;
+		}
+	}
+}
+.examples__after--wrapper {
 	position: relative;
-}
-.swiper-wrapper {
-
-}
-.examples__after {
-	overflow: hidden;
 	grid-column:  1 / 3;
 	grid-row: 2 / 4;
-	z-index: 5;
+
+	@include tablet {
+		grid-column: 2 / 4;
+		grid-row: 3 / 5
+	}
+	@include mobile768 {
+		grid-column: 1 / 3;
+		grid-row: 3 / 5;
+	}
+		&::after {
+			content: "После";
+			position: absolute;
+			right:-8%;
+			top:60%;
+			writing-mode: vertical-lr;
+			transform: rotate(180deg) translateY(50%);
+			font-size: clamp(1.563rem, -1.207rem + 4.33vw, 2.688rem); //43/25 1440/1024
+			font-weight: 700;
+			line-height: 130%;
+			@include tablet {
+				 right: -10%;
+			}
+			@include tablet1024 {
+				 right: -8%;
+			}
+			@include mobile768 {
+				font-size: clamp(1.25rem, 1.026rem + 1.12vw, 1.563rem); //25/20 to 320
+				right:-8%;
+			}
+			@include mobile440 {
+				 right: -11%;
+			}
+		}
+}
+.examples__after {
+	overflow: hidden !important;
+	height: 100%;
+	.swiper-wrapper {
+		.swiper-slide {
+			backface-visibility: unset !important;
+		}
+	}
 }
 .examples__desc {
 	grid-column: 3 / 4;
 	grid-row: 3 / 4;
-	padding:63px 0 0 89px;
-	&:before  {
-		content: "После";
-		position: absolute;
-		left:0;
-		top:50%;
-		writing-mode: vertical-lr;
-		transform: rotate(180deg) translateY(50%);
-
-		font-size: 43px;
-		font-weight: 700;
-		line-height: 130%;
+	padding:20px 0 0 89px;
+	// position: relative;
+	@include tablet {
+		grid-column: 1 / 2;
+		grid-row: 3 / 5;
+		padding:0;
 	}
-	.swiper-wrapper {
-		overflow: hidden;
+	@include mobile768 {
+		 display: none;
 	}
 }
 .examples__btns-wrapper {
@@ -80,6 +208,9 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
+	@include tablet {
+		grid-row: 2 / 3;
+	}
 }
 
 .icon {
@@ -97,8 +228,10 @@
 .swiper-slide {
 }
 .examples__swiper-slide {
-	position: relative;
-
+	img {
+		width: 100% !important;
+		height:100% !important; 
+	}
 }
 .examples__slide-before {
 
@@ -107,16 +240,25 @@
 
 }
 .examples__desc-wrapper {
-	text-align: left;
-	font-size: 24px;
+	text-align: left; 
+	font-size: clamp(0.938rem, -0.447rem + 2.16vw, 1.5rem); //24/15 1440/1024
 	line-height: 150%;
 	font-weight: 400;
+	display: flex !important;
+	flex-direction: column;
+	@include mobile768 {
+		 font-size: clamp(0.75rem, 0.616rem + 0.67vw, 0.938rem);
+	}
 }
 .examples__desc-title {
 	font-weight: 700;
 	margin-bottom: 20px;
+	margin-top:auto;
+	@include tablet {
+		 margin-top:unset;
+	}
 }
 .examples__desc-text {
-
+overflow-y: scroll;
 }
 // Example SLides Example SLides  Example SLides  Example SLides  Example SLides 

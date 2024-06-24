@@ -132,7 +132,7 @@ const swiperServices = new Swiper('.swiper__services', {
 		 translate: [0, 0, -400],
 	  },
 	  next: {
-		 translate: ["100%", 0, 0],
+		 translate: ["-100%", 0, 0],
 	  },
 	},
 	pagination: {
