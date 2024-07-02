@@ -13,7 +13,7 @@ function examplesOpenDesc(){
 
 	for (var i=0 ; i<closeDesc.length; i++) {
 		closeDesc[i].addEventListener("click", function(){
-			mainBlock[0].style.left = '-100%';
+			mainBlock[0].style.left = '-110%';
 			mainBlock[0].style.opacity = '0';
 			openDesc[0].style.display = 'block';
 
