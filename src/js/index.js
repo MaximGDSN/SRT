@@ -109,6 +109,14 @@ const swiperServices = new Swiper('.swiper__services', {
 		 translate: ["100%", 0, 0],
 	  },
 	},
+	breakpoints: {
+		0: {
+			loop:false,
+		},
+		768: {
+			loop:true,
+		},
+	 },
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -132,9 +140,17 @@ const swiperServices = new Swiper('.swiper__services', {
 		 translate: [0, 0, -400],
 	  },
 	  next: {
-		 translate: ["-100%", 0, 0],
+		 translate: ["100%", 0, 0],
 	  },
 	},
+	breakpoints: {
+		0: {
+			loop:false,
+		},
+		768: {
+			loop:true,
+		},
+	 },
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -146,12 +162,20 @@ const swiperServices = new Swiper('.swiper__services', {
  });
 
  const swiperExamplesDesc = new Swiper ('.examples__desc', {
+
 	direction: 'horizontal',
-	loop: true,
 	slidesPerView: 1,
-	speed:800,
+	speed:600,
 	allowTouchMove: false,
 	effect: "flip",
+	breakpoints: {
+		0: {
+			loop:false,
+		},
+		768: {
+			loop:true,
+		},
+	 },
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -161,3 +185,6 @@ const swiperServices = new Swiper('.swiper__services', {
 		prevEl: '.examples__btn-prev',
 	 },
  });
+
+ import examplesOpenDesc from './modules/mobile-examples.js';
+ examplesOpenDesc();

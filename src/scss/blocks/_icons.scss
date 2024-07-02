@@ -15,12 +15,9 @@
 	width: 27px;
 	height:23px; 
 	fill: #808080;
-	&:focus {
-		fill: #fff;
-	}
 	@include tablet {
-		width: clamp(0.688rem, 0.46rem + 1.14vw, 1.313rem) !important; //21/11 to 320
-		height: clamp(0.688rem, 0.506rem + 0.91vw, 1.188rem) !important; //19/11 to 320
+		width: clamp(1rem, 0.886rem + 0.57vw, 1.313rem) !important; //21/16 to 320
+		height: clamp(0.938rem, 0.847rem + 0.45vw, 1.188rem) !important; //19/15 to 320
 	}
 }
 

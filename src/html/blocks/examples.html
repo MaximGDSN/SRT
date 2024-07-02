@@ -18,6 +18,7 @@
 					</svg>
 				</div>
 				<div class="examples__pagination"></div>
+	
 				<div class="examples__btn-next">
 					<svg class="icon icon--arrow-right">
 						<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
@@ -42,13 +43,15 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="examples__desc">
-				<div class="swiper-wrapper">
-					@@loop('./blocks/examples__desc.html', './data/examples-desc.json')
+			<div class=" examples__desc- examples__desc--open">Читать описание</div>
+			<div class="examples__desc-wrapper">
+				<div class="examples__desc">
+					<div class="swiper-wrapper">
+						@@loop('./blocks/examples__desc.html', './data/examples-desc.json')
+					</div>
+					<div class=" examples__desc- examples__desc--close">Свернуть</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </section>
