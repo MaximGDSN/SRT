@@ -8,6 +8,7 @@ const config = {
 	output: {
 		filename: '[name].bundle.js',
 	},
+	
 	module: {
 		rules: [
 			{
@@ -16,6 +17,8 @@ const config = {
 			},
 		],
 	},
+	
 };
 
 module.exports = config;
+

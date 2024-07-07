@@ -36,6 +36,7 @@
 		"style-loader": "^3.3.3",
 		"webpack-stream": "^7.0.0"
 	},
+
 	"babel": {
 		"presets": [
 			"@babel/preset-env"
@@ -44,6 +45,7 @@
 	"browserslist": [
 		"last 5 versions"
 	],
+
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
 		"@fancyapps/ui": "^5.0.35",

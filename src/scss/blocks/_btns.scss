@@ -6,6 +6,7 @@ width: 269px;
 min-height: 57px;
 margin: 0 auto;
 display: block;
+border-radius: 4px;
 
 font-weight: 700;
 font-size: 20px;
@@ -141,9 +142,6 @@ gap:0 46px;
 	 grid-row: 2 / 3;
 }
 }
-.examples__btn-prev {
-	
-}
 .examples__pagination {
 	width: unset !important;
 	.swiper-pagination-bullet {
@@ -158,8 +156,39 @@ gap:0 46px;
 		}
 	}
 }
-.examples__btn-next {
+
+//Example Buttons Example Buttons Example Buttons Example Buttons
+
+// Review Buttons Review Buttons Review Buttons Review Buttons Review Buttons
+.reviews__btns-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 30px;
+	margin-top: 40px;
+	z-index: 2;
+	@include notebook {
+		 margin-top: 25px;
+	}
+	@include mobile440 {
+		 margin-top: 14px;
+	}
+}
+.reviews__btn-prev {
+}
+.icon {
+}
+.icon--arrow-left {
+}
+.reviews__pagination {
+	width: unset !important;
+}
+.reviews__btn-next {
+
+}
+.icon--arrow-right {
 }
 
 
-//Example Buttons Example Buttons Example Buttons Example Buttons
+// Review Buttons Review Buttons Review Buttons Review Buttons Review Buttons

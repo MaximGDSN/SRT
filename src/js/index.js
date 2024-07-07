@@ -109,14 +109,6 @@ const swiperServices = new Swiper('.swiper__services', {
 		 translate: ["100%", 0, 0],
 	  },
 	},
-	breakpoints: {
-		0: {
-			loop:false,
-		},
-		768: {
-			loop:true,
-		},
-	 },
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -143,14 +135,6 @@ const swiperServices = new Swiper('.swiper__services', {
 		 translate: ["100%", 0, 0],
 	  },
 	},
-	breakpoints: {
-		0: {
-			loop:false,
-		},
-		768: {
-			loop:true,
-		},
-	 },
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -167,15 +151,9 @@ const swiperServices = new Swiper('.swiper__services', {
 	slidesPerView: 1,
 	speed:600,
 	allowTouchMove: false,
+	loop:true,
 	effect: "flip",
-	breakpoints: {
-		0: {
-			loop:false,
-		},
-		768: {
-			loop:true,
-		},
-	 },
+
 	pagination: {
 		el: '.examples__pagination',
 		clickable: true,
@@ -188,3 +166,39 @@ const swiperServices = new Swiper('.swiper__services', {
 
  import examplesOpenDesc from './modules/mobile-examples.js';
  examplesOpenDesc();
+
+  const swiperReviews = new Swiper ('.swiper__reviews', {
+	direction: 'horizontal',
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 15,
+	speed:600,
+	breakpoints: {
+		441: {
+			slidesPerView:2,
+		},
+		700: {
+			spaceBetween: 15,
+			slidesPerView:3,
+		},
+		1200: {
+			spaceBetween: 25,
+			slidesPerView:3,
+		},
+		1440: {
+			spaceBetween:41,
+			slidesPerView:3,
+		},
+	},
+	pagination: {
+		el: '.reviews__pagination',
+		clickable: true,
+	 },
+	 navigation: {
+		nextEl: '.reviews__btn-next',
+		prevEl: '.reviews__btn-prev',
+	 },
+ });
+
+ import footerMap from './modules/footer-map.js';
+ footerMap();

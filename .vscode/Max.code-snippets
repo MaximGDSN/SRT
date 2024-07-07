@@ -39,7 +39,12 @@
 		"body": ["@include mobile768 {", "    ${1}", "}"],
 		"description": "mobile768"
 	},
-
+	"mediaMobile600": {
+		"scope": "css,scss",
+		"prefix": "mobile600",
+		"body": ["@include mobile600 {", "    ${1}", "}"],
+		"description": "mobile600"
+	},
 	"mediaMobile440": {
 		"scope": "css,scss",
 		"prefix": "mobile440",

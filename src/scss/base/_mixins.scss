@@ -25,6 +25,11 @@
 	  @content;
   }
 }
+@mixin mobile600 () {
+	@media (max-width: 600px) {
+	  @content;
+  }
+}
 @mixin mobile440 () {
 	@media (max-width: 440px) {
 	  @content;

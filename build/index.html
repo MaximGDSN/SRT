@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=c7e59a09-e494-4853-9995-f10ce7c10525&lang=ru_RU"></script>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
 		<title>SRT- GARARE</title>
 		<link rel="stylesheet" href="./css/main.css" />
 
@@ -307,15 +308,15 @@
 								Лучшая награда для нас&#160;&#8212; благодарность<br />
 								довольных клиентов
 							</h3>
-							<div class="examples__btns-wrapper">
-								<div class="examples__btn-prev">
+							<div class="examples__btns-wrapper ">
+								<div class="examples__btn-prev align-center">
 									<svg class="icon icon--arrow-left">
 										<use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
 									</svg>
 								</div>
 								<div class="examples__pagination"></div>
 
-								<div class="examples__btn-next">
+								<div class="examples__btn-next align-center">
 									<svg class="icon icon--arrow-right">
 										<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
 									</svg>
@@ -406,8 +407,7 @@
 										<h4 class="examples__desc-title">Полный перекрас vw&#160;passat 2012 года выпуска.</h4>
 										<p class="examples__desc-text">
 											С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина была удалена с&#160;а/м, проведена обработка антикоррозионным
-											грунтом, все неровности на&#160;поверхности кузова устранены. С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина
-											была удалена с&#160;а/м, проведена обработка антикоррозионным грунтом, все неровности на&#160;поверхности кузова устранены.
+											грунтом, все неровности на&#160;поверхности кузова устранены. С&#160;вышкуриваниеоверхности кузова устранены.
 										</p>
 									</div>
 
@@ -441,7 +441,220 @@
 					</div>
 				</div>
 			</section>
+			<section class="section-grade">
+				<div class="container">
+					<div class="grade__grid">
+						<div class="grade__grid-content">
+							<h2 class="title grade__title">Оценка стоимости ремонта по&#160;фото</h2>
+							<div class="grade__desc">
+								Отправьте фото поврежденной детали нам через WhatsApp на&#160;номер или на&#160;электронную почту <span>Djbass1992@mail.ru</span> и&#160;наши мастера
+								оценят примерную стоимость ремонта
+							</div>
+							<div class="grade__number">+7&#160;989&#160;793-51-05</div>
+
+							<form action="#" method="post" class="grade__form">
+								<input type="name" name="name" placeholder="Имя" />
+								<input type="number" name="number" placeholder="Телефон" />
+
+								<div class="grade__btns-wrapper">
+									<button type="button" class="add-photo grade__btn">Добавить фото</button>
+									<button type="button" class="grade__send grade__btn">Отправить форму</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="grade__grid-img"></div>
+					</div>
+				</div>
+			</section>
+			<section class="section-reviews">
+				<picture>
+					<source srcset="./img/reviews/reviews-bg.webp 1x, ./img/reviews/reviews-bg@2x.webp 2x" type="image/webp" />
+					<source srcset="./img/reviews/reviews-bg.png 1x, ./img/reviews/reviews-bg@2x.png 2x" type="image/png" />
+					<img class="reviews__bg-img" src="./img/reviews/reviews-bg.png" alt="Машина задний фон" />
+				</picture>
+				<div class="container">
+					<div class="reviews__wrapper">
+						<div class="reviews__header">
+							<h2 class="reviews__header-title title">ОТЗЫВЫ</h2>
+							<a class="review__header-more" href="#">
+								<p>Больше отзывов на</p>
+							</a>
+						</div>
+						<div class="swiper swiper__reviews">
+							<div class="swiper-wrapper swiper-wrapper__reviews">
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Максим</h3>
+										<p class="reviews__slide-desc">
+											Работа была выполнена качественно, Николай заранее озвучил цену, предложил самые оптимальные варианты по&#160;покраске, сложилось
+											впечатление знающего человека при осмотре авто, что после и&#160;подтвердилось на&#160;деле, также присылал промежуточные фото работ. Всем
+											доволен, спасибо!
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Алексей</h3>
+										<p class="reviews__slide-desc">
+											Машину сделали в&#160;заявленный срок. Стоимость услуг была обговорена. К&#160;качеству лакокрасочного покрытия нареканий нет, сделали
+											отлично.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Артем</h3>
+										<p class="reviews__slide-desc">
+											После дтп пострадало переднее крыло и&#160;бампер (ремонт пластика, покраска). Работу мастер выполнил хорошо. Подбор краски и&#160;ремонт,
+											все сделано на&#160;уровне и&#160;в&#160;срок. Мастер всегда на&#160;связи, присылает фото отчет выполненых работ. Рекомендую.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Пользователь</h3>
+										<p class="reviews__slide-desc">
+											Адекватные и&#160;отличные мастера, работа свою знают. Очень качественная работа по&#160;кузову, а&#160;именно вытянули лонжерон после
+											сильного ДТП, прошли аккуратно швы, одним словом восстановили автомобиль. Покрасили отлично. Работой доволен, к&#160;мастерам претензий
+											нет.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Михаил</h3>
+										<p class="reviews__slide-desc">
+											Пришел с&#160;целью покрасить бампер, поправить капот и&#160;заменить стекло фары. Все покрасили оригинальной краской, бонусом починили
+											крепежи, покрасили &#171;стаканы&#187; противотуманных&#160;фар. Никаких изменений цвета &#171;на&#160;пластике&#187; нет, все идеально.
+											Выправили и&#160;покрасили капот (бюджет ограничен&#160;&#8212; покрасили переходом, перехода невооруженным глазом не&#160;видно). Бонусом
+											восстановили крепление фары:)) очень доволен мастерами. Если нужно чтобы сделали как для себя&#160;&#8212; вам точно сюда.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Анастасия</h3>
+										<p class="reviews__slide-desc">
+											Очень вежливый и&#160;коммуникабельный мастер. Работу выполнил идеально. Быстро и&#160;качественно. Хотели сначала отремонтировать только
+											бампер, но&#160;после общения с&#160;мастером сделали еще и&#160;капот. Цвет подобралт идеально. Отвечал на&#160;все вопросы и&#160;был
+											всегда на&#160;связи. Рекомендую. Обязательно обратимся еще.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Николай</h3>
+										<p class="reviews__slide-desc">
+											Реставрировали проем лобового стекла. Резали, варили, красили. Работой остался доволен. Компетентные ребята, понимают что делают.
+											Выполнили все в&#160;обговоренный срок. Я&#160;остался доволен.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Иван</h3>
+										<p class="reviews__slide-desc">
+											Делался ремонт двух дверей и&#160;порога, машина киа&#160;сид. Сделали все качественно, ребята все понимают что делают, всем рекомендую.
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+								<div class="swiper-slide reviews__slide-wrapper">
+									<div class="reviews__slide-content__inner">
+										<h3 class="reviews__slide-title">Алексей</h3>
+										<p class="reviews__slide-desc">
+											Красил свою мазду с&#160;заменой арок задних крыльев и&#160;передних крыльев. Красились полностью бока плюс задний бампер. Работа была
+											выполнена хорошо и&#160;в&#160;установленные сроки. Были даны дополнительные консультации по&#160;авто. Николай человек адекватный
+											и&#160;всегда находился на&#160;связи. Всем добра!
+										</p>
+									</div>
+									<div class="reviews__slide-bg"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="reviews__btns-wrapper">
+							<div class="reviews__btn-prev align-center">
+								<svg class="icon icon--arrow-left">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="reviews__pagination"></div>
+
+							<div class="reviews__btn-next align-center">
+								<svg class="icon icon--arrow-right">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="review__mobile-more__wrapper">
+							<a class="review__header-more--mobile" href="#">
+								<p>Больше отзывов на</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__copyright">
+					<div class="title__wrapper">
+						<div class="line-left"></div>
+						<h2 class="services__title title">КОНТАКТЫ</h2>
+					</div>
+					<div class="footer__grid">
+						<div id="footer-map" class="footer__map"></div>
+
+						<div class="footer__information-wrapper">
+							<ul class="footer__contacts-wrapper">
+								<li class="footer__contacts">
+									<a class="footer__contact" href="#">
+										<img class="footer__contact-icon" src="./img/footer/location-map.svg" alt="" />
+										Астрахань, Украинская 3, лит&#160;1
+									</a>
+								</li>
+
+								<li class="footer__contacts">
+									<a class="footer__contact" href="#">
+										<img class="footer__contact-icon" src="./img/footer/number.svg" alt="" />
+										+7&#160;989&#160;793-51-05
+									</a>
+								</li>
+								<li class="footer__contacts">
+									<a class="footer__contact" href="#">
+										<img class="footer__contact-icon" src="./img/footer/email.svg" alt="" />
+										Djbass1992@mail.ru
+									</a>
+								</li>
+								<li class="footer__contacts">
+									<a class="footer__contact" href="#">
+										<img class="footer__contact-icon" src="./img/footer/footer-avito.svg" alt="" />
+										Мы&#160;на<span>Авито</span>
+									</a>
+								</li>
+							</ul>
+							<button class="footer__contact-us red__btn">Связаться с&#160;нами</button>
+						</div>
+
+						<ul class="footer__endLine-wrapper">
+							<li class="footer__srt">SRT-GARAGE</li>
+							<li class="footer__srt">SRT-GARAGE</li>
+							<li class="footer__srt">SRT-GARAGE</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
