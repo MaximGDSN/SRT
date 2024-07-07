@@ -1,0 +1,189 @@
+.section-reviews {
+ max-width: 1920px;
+ position: relative;
+ height: 900px;
+ background-color: #070708;
+ margin-bottom: 40px;
+
+ @include notebook {
+	 margin-bottom: clamp(0rem, -12.5rem + 16.67vw, 2.5rem); //40/0 to 1200
+	  height: clamp(31.25rem, -31.25rem + 83.33vw, 43.75rem); //700/500
+ }
+ @include tablet1024 {
+	  margin-bottom: 30px;
+ }
+}
+.reviews__bg-img {
+	position: absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	width:911px;
+	height:100%;
+	z-index: 1;
+	@include notebook {
+		 width: clamp(29.938rem, -45.063rem + 100vw, 44.938rem); //719/479 1200
+	}
+	@include mobile440 {
+		 width:100%;
+	}
+}
+.container {
+}
+.reviews__wrapper {
+	padding-top:77px;
+	z-index: 2;
+	@include notebook {
+		 padding-top:25px;
+	}
+}
+.reviews__header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom:40px;
+	@include notebook {
+		 margin-bottom: 20px;
+		 @include mobile440 {
+			  justify-content: center;
+		 }
+	}
+}
+.reviews__header-title {
+	z-index: 2;
+}
+.title {
+}
+.review__header-more, .review__header-more--mobile {
+	font-size: 25px;
+	position: relative;
+	padding-right:112px;
+	z-index: 2;
+	display: flex;
+	align-items: end;
+	@include tablet {
+		 font-size: 20px;
+	}
+	@include mobile768 {
+		 padding-right:72px;
+		 font-size: 15px;
+	}
+	@include mobile440 {
+		 display: none;
+	}
+	&::after {
+		content: "";
+		background-image: url(./../../img/reviews/avito.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom:1px solid #fff;
+		position: absolute;
+		right:0;
+		bottom:2px;
+		text-align: center;
+		width: 98px;
+		height: 32px;
+		@include mobile768 {
+			 width: 66px;
+			 height: 19px;
+		}
+	}
+	&--mobile {
+		display: none;
+		@include mobile440 {
+			margin-top: 20px;
+			 display: inline-block;
+		}
+	}
+}
+.review__mobile-more__wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+//Reviews Swiper Reviews Swiper  Reviews Swiper  Reviews Swiper  Reviews Swiper 
+.swiper {
+}
+.swiper__reviews {
+}
+
+.swiper-wrapper__reviews {
+	display: flex !important;
+}
+//Reviews Swiper Reviews Swiper  Reviews Swiper  Reviews Swiper  Reviews Swiper 
+
+//Reviews Content  Reviews Content  Reviews Content  Reviews Content  Reviews Content 
+
+.reviews__slide-wrapper {
+	height: 612px !important;
+	padding: 60px 3px 0 40px;
+	border-radius: 19px;
+	position: relative;
+	background: linear-gradient(138deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.55) 100%);
+	@include notebook {
+		 padding: 20px 3px 0 25px;
+		 height: clamp(21.25rem, -33.75rem + 73.33vw, 32.25rem) !important; //516/340 1200
+	}
+
+}
+
+.reviews__slide-bg {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width: 100%;
+	height: 100%;
+	border-radius: 19px;
+	backdrop-filter: blur(10px);
+	background: rgba(0, 0, 0, 0.86);
+	border: 3px solid #808080;
+	z-index:1;
+}
+.reviews__slide-content__inner {
+	position: relative;
+	z-index: 2;
+}
+.reviews__slide-title {
+	margin-bottom: 34px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 150%;
+	@include notebook {
+		 font-size: 20px;
+		 margin-bottom: 20px;
+	}
+	@include tablet {
+		 margin-bottom: 5px;
+	}
+	@include mobile440 {
+		 text-align: center;
+	}
+}
+.reviews__slide-desc {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	color: #e5e5e5;
+	height:465px;
+	padding-right:37px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--red-color) #fff;
+	@include notebook {
+		 font-size: clamp(0.938rem, 0.168rem + 1.2vw, 1.25rem); //20/15 1024
+		 padding-right:22px;
+		 height:clamp(15.625rem, -35.938rem + 68.75vw, 25.938rem); //415/250  1200
+	}
+	@include tablet1024 {
+		 height: 265px;
+	}
+	@include mobile768 {
+		 font-size: clamp(0.75rem, 0.616rem + 0.67vw, 0.938rem); //15/12 320
+	}
+	@include mobile440 {
+		 font-size: 18px;
+	}
+}
+//Reviews Content  Reviews Content  Reviews Content  Reviews Content  Reviews Content 

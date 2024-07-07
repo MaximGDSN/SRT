@@ -1,0 +1,43 @@
+<section class="section-reviews">
+	<img class="reviews__bg-img" src="./../../img/reviews/reviews-bg.png" alt="Машина задний фон">
+	<div class="container">
+
+		<div class="reviews__wrapper">
+			<div class="reviews__header">
+				<h2 class="reviews__header-title title">ОТЗЫВЫ</h2>
+				<a class="review__header-more" href="#">
+					<p>Больше отзывов на</p>
+				</a>
+			</div>
+				<div class="swiper swiper__reviews">
+					<div class="swiper-wrapper swiper-wrapper__reviews">
+						@@loop('blocks/reviews-swiper.html', './data/reviews.json')
+					</div>
+				</div>
+
+				<div class="reviews__btns-wrapper">
+					<div class="reviews__btn-prev align-center">
+						<svg class="icon icon--arrow-left">
+							<use href="./img/svgsprite/sprite.symbol.svg#arrow-left"></use>
+						</svg>
+					</div>
+					<div class="reviews__pagination"></div>
+		
+					<div class="reviews__btn-next align-center">
+						<svg class="icon icon--arrow-right">
+							<use href="./img/svgsprite/sprite.symbol.svg#arrow-right"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="review__mobile-more__wrapper">
+					<a class="review__header-more--mobile" href="#">
+						<p>Больше отзывов на</p>
+					</a>
+				</div>
+		</div>
+
+	
+
+
+	</div>
+</section>
