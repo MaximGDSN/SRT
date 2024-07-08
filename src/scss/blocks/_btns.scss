@@ -192,3 +192,11 @@ gap:0 46px;
 
 
 // Review Buttons Review Buttons Review Buttons Review Buttons Review Buttons
+
+//Anim Buttons
+	.btn-anim {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+//Anim Buttons

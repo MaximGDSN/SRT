@@ -177,6 +177,10 @@
 			width: clamp(1.25rem, -1.875rem + 4.17vw, 1.875rem); //30/20 to 1200
 			height: clamp(1.25rem, -1.875rem + 4.17vw, 1.875rem); //30/20 to 1200
 		}
+		@include tablet1024 {
+			 width: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem); //20/12 to 320
+			 height: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem);
+		}
 	}
 	span {
 		border-bottom: 1px solid #fff;

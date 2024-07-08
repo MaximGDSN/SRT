@@ -98,7 +98,16 @@
 	@include tablet {
 		 display: none;
 	}
+	.nav__list-item {
+		&:hover {
+			display: inline-block;
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+			color: var(--red-color);
+		}
 }
+}
+
 
 .header__adress {
 font-weight: 700;

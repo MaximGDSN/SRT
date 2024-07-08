@@ -1,4 +1,5 @@
 function footerMap() {
+
 	function init() {
 		const map = new ymaps.Map("footer-map", {
 			center: [46.35790020343951,48.11805894084198],
@@ -27,6 +28,7 @@ function footerMap() {
 	
 		}
 		ymaps.ready(init);	
+
 }
 
 export default footerMap;

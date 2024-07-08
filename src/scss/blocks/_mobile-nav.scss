@@ -9,12 +9,14 @@
 	display: flex;
     flex-direction: column;
     align-items: center;
-	justify-content: center;
-    padding-top: 40px;
     padding-bottom: 40px;
-    // background: linear-gradient(209deg, #4287b3 -17.38%, #133f6b 78.4%), #276195;
-	background: #8ccae6;
+	background: #030202;
 	transition: all 0.2s ease-in;
+	.header__logo {
+		position: static;
+		margin:4px 0 30px 30px;
+		font-size: 40px;
+	}
 }
 
 .mobile-nav--open {
@@ -28,11 +30,15 @@
 .mobile-nav__list {
 	display: flex;
 	flex-direction: column;
+	justify-content: start;
 	align-items: center;
-	row-gap: 20px;
-	font-size: 28px;
-
-	& .active {
-		opacity: 0.5;
+	row-gap: 30px;
+	font-size: 20px;
+	line-height: 150%;
+	.nav__list-item {
+		padding:9px 78px;
+		&:active {
+			border:1px solid var(--red-color);
+		}
 	}
 }
