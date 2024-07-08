@@ -1,7 +1,7 @@
 .section-grade {
 	background-image: image-set(
-	url('./../../img/grade/grade-bg.jpg') 1x,
-	url('./../../img/grade/grade-bg@2x.jpg') 2x);
+	url('./../../img/grade/grade-bg.webp') 1x,
+	url('./../../img/grade/grade-bg@2x.webp') 2x);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -186,8 +186,8 @@ font-size: 30px;
 }
 .grade__grid-img {
 	background-image: image-set(
-	url('./../../img/grade/whatsapp-msg.jpg') 1x,
-	url('./../../img/grade/whatsapp-msg@2x.jpg') 2x);
+	url('./../../img/grade/whatsapp-msg.webp') 1x,
+	url('./../../img/grade/whatsapp-msg@2x.webp') 2x);
 	background-position: bottom;
 	background-size:contain;
 	background-repeat: no-repeat;
