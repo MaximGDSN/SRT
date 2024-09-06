@@ -5,8 +5,6 @@
 		padding:30px 0 30px 0;
 	}
 }
-.container {
-}
 
 .examples__grid {
 	display: grid;
@@ -88,7 +86,7 @@
 	}
 	@include mobile768 {
 		font-size: clamp(0.938rem, 0.714rem + 1.12vw, 1.25rem); //20/15 767/320
-		margin-top: 15px;
+		margin-top: 5px;
 		margin-bottom: 10px;
 		text-align: center;
 	}
@@ -198,6 +196,7 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	@include tablet {
 		grid-row: 2 / 3;
 	}
@@ -209,7 +208,6 @@
 		display: block;
 		padding-top:10px;
 		height:unset;
-		// transform: translateX(-110%);
 		max-width: 100%;
 		transition: transform 0.2s linear;
 	}
@@ -259,32 +257,18 @@
 		}
 	}
 
-.icon {
-}
-.icon--arrow-left {
-}
-.swiper-pagination__examples {
-}
-.swiper-button-next {
-}
 
 // Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper  Examples ++ Swiper
 
 // Example SLides Example SLides  Example SLides  Example SLides  Example SLides 
-.swiper-slide {
-}
+
 .examples__swiper-slide {
 	img {
 		width: 100% !important;
 		height:100% !important; 
 	}
 }
-.examples__slide-before {
 
-}
-.examples__slide-after {
-
-}
 .examples__desc-inner {
 	text-align: left; 
 	font-size: clamp(0.938rem, -0.447rem + 2.16vw, 1.5rem); //24/15 1440/1024
@@ -316,9 +300,9 @@
 	scrollbar-width: thin;
 	scrollbar-color: var(--red-color) #fff;
 	color: #fff;
-@include mobile768 {
-	 text-align: center;
-	 overflow-y: unset;
-}
+	@include mobile768 {
+		text-align: center;
+		overflow-y: unset;
+	}
 }
 // Example SLides Example SLides Example SLides  Example SLides  Example SLides 

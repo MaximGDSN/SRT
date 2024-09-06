@@ -3,7 +3,7 @@
 	position:relative;
 	padding-top: 30px;
 	margin-bottom:40px;
-	height: clamp(31.25rem, -0.833rem + 42.78vw, 50.5rem); //808/500 1920/1200
+	height: clamp(32.5rem, 2.5rem + 40vw, 50.5rem); //808/520 1920/1200
 	background-image: image-set(
 	url('./../../img/hero/hero-car.webp') 1x,
 	url('./../../img/hero/hero-car@2x.webp') 2x);
@@ -28,16 +28,16 @@
 	@include mobile440 {
 		img {
 			width: 100%;
-			height: 375px;
+			height: 390px;
 		}
 		display: block;
 		position: absolute;
 		bottom:0;
-		top:100px;
+		top:130px;
 		left:0;
 		right:0;
 		width: 100vw;
-		height: 375px;
+		height: 390px;
 	}
 }
 .hero-wrapper {

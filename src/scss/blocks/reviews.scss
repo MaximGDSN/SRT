@@ -28,8 +28,7 @@
 		 width:100%;
 	}
 }
-.container {
-}
+
 .reviews__wrapper {
 	padding-top:77px;
 	z-index: 2;
@@ -51,8 +50,7 @@
 .reviews__header-title {
 	z-index: 2;
 }
-.title {
-}
+
 .review__header-more, .review__header-more--mobile {
 	font-size: 25px;
 	position: relative;
@@ -102,10 +100,6 @@
 }
 
 //Reviews Swiper Reviews Swiper  Reviews Swiper  Reviews Swiper  Reviews Swiper 
-.swiper {
-}
-.swiper__reviews {
-}
 
 .swiper-wrapper__reviews {
 	display: flex !important;
@@ -183,7 +177,7 @@
 		 font-size: clamp(0.75rem, 0.616rem + 0.67vw, 0.938rem); //15/12 320
 	}
 	@include mobile440 {
-		 font-size: 18px;
+		 font-size: 14px;
 	}
 }
 //Reviews Content  Reviews Content  Reviews Content  Reviews Content  Reviews Content 

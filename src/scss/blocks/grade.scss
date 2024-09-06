@@ -5,14 +5,12 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
 	}
-.container {
-}
+
 .grade__grid {
 	display: flex;
 	gap:0 60px;
-	padding:103px 95px 0px 104px;
+	padding:50px 95px 0px 104px;
 	@include notebook {
 		padding: clamp(2.688rem, -0.082rem + 4.33vw, 3.813rem)//61/43
 		 clamp(0rem, -14.154rem + 22.12vw, 5.75rem) //92/0 to 1024
@@ -36,21 +34,24 @@
 font-weight: 400;
 line-height: 150%;
 color: rgba(0, 0, 0, 0.86);
+margin:auto 0;
 
 }
 .grade__title {
 	font-weight: 700;
 	font-family: var(--font-title);
-	line-height: 150%;
+	line-height: 130%;
 	color: rgba(0, 0, 0, 0.86);
 	padding:0;
+	margin-top:-30px;
 	@include notebook {
-		 font-size: clamp(2.5rem, -0.625rem + 4.17vw, 3.125rem); //50/40 to 1200
+		font-size:clamp(2.5rem, 1.786rem + 1.49vw, 3.125rem);//50/40 to 768
 	}
 	@include tablet {
 		 line-height: 120%;
 	}
 	@include mobile768 {
+		margin-top: unset;
 		 text-align: center; 
 		 font-size: clamp(1.563rem, 0.891rem + 3.36vw, 2.5rem); //40/25 
 	}
@@ -58,16 +59,22 @@ color: rgba(0, 0, 0, 0.86);
 }
 .grade__desc {
 	max-width: 576px;
-	font-size: 24px;
-	margin:40px 0 30px 0;
+	font-size: 26px;
+	margin:40px 0 40px 0;
 	line-height: 150%;
-	span {
+	a {
 		font-weight: 700;
+		color: #000000;
+		font-size: 108%;
+		&:hover, &:focus {
+			color:var(--red-color);
+		}
 	}
 	@include notebook {
-		 font-size: clamp(1.125rem, 0.5rem + 0.83vw, 1.25rem); //20/18 to 1200
-		 margin: clamp(0.625rem, -3.99rem + 7.21vw, 2.5rem) 0
-		 clamp(0.625rem, -2.452rem + 4.81vw, 1.875rem) 0;
+		font-size: clamp(1.25rem, 0.821rem + 0.89vw, 1.625rem); //26/20 to 768
+		 margin: clamp(1.375rem, 0.089rem + 2.68vw, 2.5rem) //40/22 to 768
+		  0 clamp(1.25rem, -0.179rem + 2.98vw, 2.5rem) //40/20 to 768
+		   0;
 	}
 	@include mobile768 {
 		 max-width: unset;
@@ -76,113 +83,25 @@ color: rgba(0, 0, 0, 0.86);
 	}
 }
 .grade__number {
+	position: relative;
 font-weight: 700;
 font-size: 30px;
+&:hover, &:focus {
+	color:var(--red-color);
+}
+a {
+	position: absolute;
+	width: 100%;
+	height:100%;
+}
 @include notebook {
-	 font-size: clamp(1.25rem, -0.313rem + 2.08vw, 1.563rem) //25/20 to 1200
+	font-size: clamp(1.375rem, 0.804rem + 1.19vw, 1.875rem); //30/22 to 768
 }
 @include mobile768 {
 	 text-align: center;
 	 margin:10px 0 10px 0;
 	 font-size: clamp(0.938rem, 0.714rem + 1.12vw, 1.25rem); //20/15 320
 }
-}
-.add-photo {
-}
-
-.grade__form {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px 0;
-	width: 544px;
-
-	margin-top: 47px;
-
-	@include notebook {
-		 gap:clamp(0.813rem, -2.938rem + 5vw, 1.563rem)//25/13 to 1200
-		  0;
-		 width: clamp(27.5rem, -5rem + 43.33vw, 34rem); //544/440
-		 margin-top:clamp(0.625rem, -5.067rem + 8.89vw, 2.938rem) //47/10
-	}
-	@include tablet1024 {
-		 width:420px;
-	}
-	@include mobile768 {
-		 margin:0 auto;
-		 width:75vw;
-	}
-
-	input {
-		border: 1px solid #030202;
-		width: 100%;
-		height: 56px;
-		padding-left: 13px;
-		position: relative;
-		@include notebook {
-			 height: clamp(2.813rem, -0.625rem + 4.58vw, 3.5rem); //56/45 to 1200
-		}
-		@include mobile768 {
-			 height: clamp(1.5rem, 0.56rem + 4.7vw, 2.813rem); //45/24 320
-			 padding-left: 1vw;
-		}
-		&::placeholder {
-			font-weight: 400;
-			font-size: 24px;
-			color: rgba(0, 0, 0, 0.86);
-
-			position: absolute;
-			top:50%;
-			transform: translateY(-50%);
-			@include tablet {
-				 font-size: 20px;
-			}
-			@include tablet1024 {
-				 font-size: clamp(0.75rem, 0.523rem + 1.14vw, 1.25rem); //20/12 1024/320
-			}
-		 } 
-	}
-}
-.grade__btns-wrapper {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	@include mobile768 {
-		 justify-content: space-around;
-	}
-	@include mobile440 {
-		 justify-content: space-between;
-	}
-}
-.grade__btn {
-	border-radius: 4px;
-	width: 250px;
-	height: 56px;
-
-	background: var(--red-color);
-	font-weight: 700;
-	font-size: 24px;
-	text-align: center;
-	color: #fff;
-	@include notebook {
-		height: clamp(2.813rem, -0.625rem + 4.58vw, 3.5rem); //56/45 to 1200
-		width: clamp(13.125rem, 0.625rem + 16.67vw, 15.625rem); //250/210 
-		font-size: clamp(1.125rem, -0.75rem + 2.5vw, 1.5rem); //24/18
-	}
-	@include tablet1024 {
-		 width: 190px;
-	}
-	@include mobile768 {
-		 width: 35vw;
-		 height: clamp(1.5rem, 0.56rem + 4.7vw, 2.813rem); //45/24 320
-		 font-size: clamp(0.688rem, 0.374rem + 1.57vw, 1.125rem); //18/11 320
-	}
-
-
-}
-.grade__send {
-}
-.grade__grid-img {
-	
 }
 .grade__grid-img {
 	background-image: image-set(
@@ -192,10 +111,11 @@ font-size: 30px;
 	background-size:contain;
 	background-repeat: no-repeat;
 	width: 830px;
-	height: 735px;
+	height: 600px;
 	@include notebook {
 		width: clamp(35.625rem, -4.375rem + 62.5vw, 51.875rem); //830 /570 to 1024
-		height:clamp(28.563rem, -69.875rem + 131.25vw, 48.25rem); //772/457 to 1200
+		height:clamp(23.75rem, 8.036rem + 32.74vw, 37.5rem); //600/380 1440 to 768
+		// height:clamp(28.563rem, -69.875rem + 131.25vw, 48.25rem); //772/457 to 1200
 	}
 	@include mobile768 {
 		 grid-row: 2 / 3;

@@ -3,6 +3,12 @@
 import mobileNav from './modules/mobile-nav.js';
 mobileNav();
 
+import openModal from './modules/open-modal.js';
+openModal();
+
+import validateForm from './modules/validate-form.js';
+validateForm();
+
 import Swiper from 'swiper/bundle';
 
 // import styles bundle
@@ -199,13 +205,6 @@ const swiperServices = new Swiper('.swiper__services', {
 		prevEl: '.reviews__btn-prev',
 	 },
  });
-//  setTimeout(function(){
-// 	var elem = document.createElement('script');
-// 	elem.type = 'text/javascript';
-// 	elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=c7e59a09-e494-4853-9995-f10ce7c10525&lang=ru_RU';
-// 	document.getElementsByTagName('body')[0].appendChild(elem);
-// }, 2000);
-
 
  import footerMap from './modules/footer-map.js';
  footerMap();

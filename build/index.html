@@ -4,14 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
-		<title>SRT- GARARE</title>
+		<title>SRT-GARARE</title>
 		<link rel="stylesheet" href="./css/main.css" />
-		<script src="https://api-maps.yandex.ru/2.1/?apikey=c7e59a09-e494-4853-9995-f10ce7c10525&lang=ru_RU"></script>
-
 		<link rel="icon" type="image/svg+xml" href="./img/favicons/favicon.svg" />
 		<link rel="apple-touch-icon" sizes="180x180" type="image/svg+xml" href="./img/favicons/apple-touch-icon.svg" />
 	</head>
-
 	<body>
 		<header class="header">
 			<div class="container">
@@ -26,12 +23,12 @@
 
 					<nav class="header__nav nav">
 						<ul class="nav__list">
-							<li><a href="#about--id" class="nav__list-item">О&#160;нас</a></li>
-							<li><a href="#services--id" class="nav__list-item">Услуги</a></li>
-							<li><a href="#examples--id" class="nav__list-item">Наши работы</a></li>
-							<li><a href="#reviews--id" class="nav__list-item">Отзывы</a></li>
-							<li><a href="#contacts--id" class="nav__list-item">Контакты</a></li>
-							<li class="header__adress"><a href="#">г. Астрахань ул.&#160;Украинская д.&#160;3, лит 1</a></li>
+							<li><a href="#about--id" aria-label="О нас" class="nav__list-item">О&#160;нас</a></li>
+							<li><a href="#services--id" aria-label="Наши услуги" class="nav__list-item">Услуги</a></li>
+							<li><a href="#examples--id" aria-label="Наши работы" class="nav__list-item">Наши работы</a></li>
+							<li><a href="#reviews--id" aria-label="Отзывы" class="nav__list-item">Отзывы</a></li>
+							<li><a href="#contacts--id" aria-label="Контакты" class="nav__list-item">Контакты</a></li>
+							<li class="header__adress"><a href="#contacts--id" aria-label="Наш адрес">г. Астрахань ул.&#160;Украинская д.&#160;3, лит 1</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -41,21 +38,60 @@
 			<div class="header__logo">SRT-GARAGE</div>
 
 			<ul class="mobile-nav__list">
-				<li><a href="#about--id" class="nav__list-item">О&#160;нас</a></li>
-				<li><a href="#services--id" class="nav__list-item">Услуги</a></li>
-				<li><a href="#examples--id" class="nav__list-item">Наши работы</a></li>
-				<li><a href="#reviews--id" class="nav__list-item">Отзывы</a></li>
-				<li><a href="#contacts--id" class="nav__list-item">Контакты</a></li>
+				<li><a href="#about--id" aria-label="О нас" class="nav__list-item">О&#160;нас</a></li>
+				<li><a href="#services--id" aria-label="Наши услуги" class="nav__list-item">Услуги</a></li>
+				<li><a href="#examples--id" aria-label="Наши работы" class="nav__list-item">Наши работы</a></li>
+				<li><a href="#reviews--id" aria-label="Отзывы" class="nav__list-item">Отзывы</a></li>
+				<li><a href="#contacts--id" aria-label="Контакты" class="nav__list-item">Контакты</a></li>
 			</ul>
 		</div>
 
 		<main class="main">
+			<div id="modal-window" class="form">
+				<form action="send_mail.php" method="POST" class="form__request" name="form">
+					<button id="close-modal-window" class="form__close">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="cross">
+							<line class="form__close-btn" x1="9.37" x2="54.63" y1="9.37" y2="54.63" fill="none" stroke="#000024" stroke-miterlimit="10" stroke-width="4"></line>
+							<line class="form__close-btn" x1="9.37" x2="54.63" y1="54.63" y2="9.37" fill="none" stroke="#000024" stroke-miterlimit="10" stroke-width="4"></line>
+						</svg>
+					</button>
+					<div class="request__title">Свяжитесь с&#160;нами</div>
+
+					<div class="request__group">
+						<input type="text" class="request__name" id="name" name="name" placeholder="Имя" data-reg="^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$" , />
+						<label for="name">Как к&#160;вам обращаться?</label>
+					</div>
+
+					<div class="request__group">
+						<input
+							type="text"
+							class="request__phone"
+							id="phone"
+							name="phone"
+							data-reg="^(((\+7|7|8)+(|(\s))+(([\d]){3})+(|(\s))+([\d]){3})+(|(\s))+(([\d]){2})+(|(\s))+(([\d]){2}))$"
+							placeholder="Номер телефона"
+						/>
+						<label for="phone">Телефон в&#160;формате +7&#160;929&#160;555-15-75</label>
+					</div>
+
+					<div class="request__group">
+						<input type="text" class="request__car" name="car" id="car" placeholder="Марка автомобиля и год" data-reg="" />
+						<label for="car">Марка вашего автомобиля и&#160;год выпуска</label>
+					</div>
+
+					<div class="request__group">
+						<textarea name="message" cols="30" rows="7" placeholder="Ваш вопрос" required></textarea>
+					</div>
+
+					<button type="submit" class="send-form" id="form-btn" name="form-btn">Отправить форму</button>
+				</form>
+			</div>
 			<section class="section-hero">
 				<div class="hero-bg__mobile">
 					<picture>
 						<source srcset="./img/hero/hero-car440.webp 1x, ./img/hero/hero-car440@2x.webp 2x" type="image/webp" />
 						<source srcset="./img/hero/hero-car440.png 1x, ./img/hero/hero-car440@2x.png 2x" type="image/png" />
-						<img src="./img/hero/hero-car440.png" alt="Машина" />
+						<img loading="lazy" src="./img/hero/hero-car440.png" alt="Машина" />
 					</picture>
 				</div>
 				<div class="container">
@@ -64,13 +100,13 @@
 							<h1 class="hero__item-title"><span>ПОКРАСКА</span> АВТО<br />И&#160;КУЗОВНОЙ<br />РЕМОНТ</h1>
 						</li>
 						<li class="hero__item">
-							<p class="hero__item-text">Возвращаем красоту и&#160;безопасность<br />вашему автомобилю!</p>
+							<h2 class="hero__item-text">Возвращаем красоту и&#160;безопасность<br />вашему автомобилю!</h2>
 						</li>
 						<li class="hero__item">
-							<p class="hero__number">+7&#160;989&#160;793-51-05</p>
+							<a href="tel:+79897935105" class="hero__number" aria-label="Наш номер">+7&#160;989&#160;793-51-05</a>
 						</li>
 						<li class="hero__item-offer">
-							<h4 class="offer__title">РЕМОНТ <span>ДЕШЕВЛЕ</span></h4>
+							<h3 class="offer__title">РЕМОНТ <span>ДЕШЕВЛЕ</span></h3>
 							<h4 class="offer__title2">НА&#160;50%</h4>
 							<p class="offer__text">Официального диллера</p>
 						</li>
@@ -185,8 +221,8 @@
 										<div class="services__item-price-cost">от&#160;<span>10 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -201,8 +237,8 @@
 										<div class="services__item-price-cost">от&#160;<span>3 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -215,8 +251,8 @@
 										<div class="services__item-price-cost">от&#160;<span>3 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -229,8 +265,8 @@
 										<div class="services__item-price-cost">от&#160;<span>120 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -245,8 +281,8 @@
 										<div class="services__item-price-cost">от&#160;<span>4 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -259,8 +295,8 @@
 										<div class="services__item-price-cost">от&#160;<span>4 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -273,8 +309,8 @@
 										<div class="services__item-price-cost">от&#160;<span>20 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -287,8 +323,8 @@
 										<div class="services__item-price-cost">от&#160;<span>2 000 р</span></div>
 									</div>
 
-									<button class="services__button red__btn request__btn btn-anim">
-										<a href="#">Оставить заявку</a>
+									<button id="modal-btn" class="services__button red__btn request__btn btn-anim">
+										<a role="main" aria-label="Оставить заявку">Оставить заявку</a>
 									</button>
 								</div>
 							</div>
@@ -305,10 +341,10 @@
 								<h1 class=" title example__title">ПРИМЕРЫ НАШИХ РАБОТ</h1>
 								<div class="line-right"></div>
 							</div>
-							<h3 class="examples__subtitle">
+							<h2 class="examples__subtitle">
 								Лучшая награда для нас&#160;&#8212; благодарность<br />
 								довольных клиентов
-							</h3>
+							</h2>
 							<div class="examples__btns-wrapper ">
 								<div class="examples__btn-prev align-center">
 									<svg class="icon icon--arrow-left">
@@ -405,7 +441,7 @@
 							<div class="examples__desc">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide examples__swiper-slide examples__desc-inner">
-										<h4 class="examples__desc-title">Полный перекрас vw&#160;passat 2012 года выпуска.</h4>
+										<h3 class="examples__desc-title">Полный перекрас vw&#160;passat 2012 года выпуска.</h3>
 										<p class="examples__desc-text">
 											С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина была удалена с&#160;а/м, проведена обработка антикоррозионным
 											грунтом, все неровности на&#160;поверхности кузова устранены. С&#160;вышкуриваниеоверхности кузова устранены.
@@ -413,7 +449,7 @@
 									</div>
 
 									<div class="swiper-slide examples__swiper-slide examples__desc-inner">
-										<h4 class="examples__desc-title">Полный перекрас vw&#160;passat 2013 года выпуска.</h4>
+										<h3 class="examples__desc-title">Полный перекрас vw&#160;passat 2013 года выпуска.</h3>
 										<p class="examples__desc-text">
 											С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина была удалена с&#160;а/м, проведена обработка антикоррозионным
 											грунтом, все неровности на&#160;поверхности кузова устранены.
@@ -421,7 +457,7 @@
 									</div>
 
 									<div class="swiper-slide examples__swiper-slide examples__desc-inner">
-										<h4 class="examples__desc-title">Полный перекрас vw&#160;passat 2014 года выпуска.</h4>
+										<h3 class="examples__desc-title">Полный перекрас vw&#160;passat 2014 года выпуска.</h3>
 										<p class="examples__desc-text">
 											С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина была удалена с&#160;а/м, проведена обработка антикоррозионным
 											грунтом, все неровности на&#160;поверхности кузова устранены.
@@ -429,7 +465,7 @@
 									</div>
 
 									<div class="swiper-slide examples__swiper-slide examples__desc-inner">
-										<h4 class="examples__desc-title">Полный перекрас vw&#160;passat 2015 года выпуска.</h4>
+										<h3 class="examples__desc-title">Полный перекрас vw&#160;passat 2015 года выпуска.</h3>
 										<p class="examples__desc-text">
 											С&#160;вышкуриванием лакокрасочного покрытия до&#160;металла. Вся ржавчина была удалена с&#160;а/м, проведена обработка антикоррозионным
 											грунтом, все неровности на&#160;поверхности кузова устранены.
@@ -448,20 +484,13 @@
 						<div class="grade__grid-content">
 							<h2 class="title grade__title">Оценка стоимости ремонта по&#160;фото</h2>
 							<div class="grade__desc">
-								Отправьте фото поврежденной детали нам через WhatsApp на&#160;номер или на&#160;электронную почту <span>Djbass1992@mail.ru</span> и&#160;наши мастера
-								оценят примерную стоимость ремонта
+								Отправьте фото поврежденной детали нам через WhatsApp на&#160;номер или на&#160;электронную почту
+								<a href="mailto:djbass1992@mail.ru">djbass1992@mail.ru</a> и&#160;наши мастера оценят примерную стоимость ремонта
 							</div>
-							<div class="grade__number">+7&#160;989&#160;793-51-05</div>
-
-							<form action="#" method="post" class="grade__form">
-								<input type="name" name="name" placeholder="Имя" />
-								<input type="number" name="number" placeholder="Телефон" />
-
-								<div class="grade__btns-wrapper">
-									<button type="button" class="add-photo grade__btn btn-anim">Добавить фото</button>
-									<button type="button" class="grade__send grade__btn btn-anim">Отправить форму</button>
-								</div>
-							</form>
+							<div class="grade__number">
+								<a href="https://wa.me/+79897935105?text=Добрый%20день!%20Пишу%20вам%20по%20поводу%20кузовного%20ремонта." aria-label="Написать нам на WhatsApp"></a
+								>+7&#160;989&#160;793-51-05
+							</div>
 						</div>
 
 						<div class="grade__grid-img"></div>
@@ -478,7 +507,11 @@
 					<div class="reviews__wrapper">
 						<div class="reviews__header">
 							<h2 class="reviews__header-title title">ОТЗЫВЫ</h2>
-							<a class="review__header-more" href="https://www.avito.ru/user/dae7b799839be9735721a512acf734ed/profile?src=sharing#open-reviews-list">
+							<a
+								class="review__header-more"
+								aria-label="Больше отзывов о нас на Авито"
+								href="https://www.avito.ru/user/dae7b799839be9735721a512acf734ed/profile?src=sharing#open-reviews-list"
+							>
 								<p>Больше отзывов на</p>
 							</a>
 						</div>
@@ -597,7 +630,11 @@
 							</div>
 						</div>
 						<div class="review__mobile-more__wrapper">
-							<a class="review__header-more--mobile" href="#">
+							<a
+								class="review__header-more--mobile"
+								aria-label="Больше отзывов о нас на Авито"
+								href="https://www.avito.ru/user/20fb622a6318a2d0177540985258f7a1/profile?id=3120701765#open-reviews-list"
+							>
 								<p>Больше отзывов на</p>
 							</a>
 						</div>
@@ -619,32 +656,36 @@
 						<div class="footer__information-wrapper">
 							<ul class="footer__contacts-wrapper">
 								<li class="footer__contacts">
-									<a class="footer__contact" href="#">
+									<a class="footer__contact" aria-label="Наш адрес" role="main">
 										<img class="footer__contact-icon" src="./img/footer/location-map.svg" alt="" />
 										Астрахань, Украинская 3, лит&#160;1
 									</a>
 								</li>
 
 								<li class="footer__contacts">
-									<a class="footer__contact" href="tel:+79897935105">
+									<a class="footer__contact" aria-label="Наш номер" href="tel:+79897935105">
 										<img class="footer__contact-icon" src="./img/footer/number.svg" alt="" />
 										+7&#160;989&#160;793-51-05
 									</a>
 								</li>
 								<li class="footer__contacts">
-									<a class="footer__contact" href="mailto:mail@djbass1992@mail.ru">
+									<a class="footer__contact" aria-label="Наша почта" href="mailto:mail@djbass1992@mail.ru">
 										<img class="footer__contact-icon" src="./img/footer/email.svg" alt="" />
 										Djbass1992@mail.ru
 									</a>
 								</li>
 								<li class="footer__contacts">
-									<a class="footer__contact" href="https://www.avito.ru/user/dae7b799839be9735721a512acf734ed/profile?src=sharing">
+									<a
+										class="footer__contact"
+										aria-label="Мы на Авито"
+										href="https://www.avito.ru/astrahan/predlozheniya_uslug/kuzovnoy_remont_i_pokraska_avto_3120701765"
+									>
 										<img class="footer__contact-icon" src="./img/footer/footer-avito.svg" alt="" />
 										<div class="footer__contact-avito">Мы&#160;на&#160;<span>Авито</span></div>
 									</a>
 								</li>
 							</ul>
-							<button class="footer__contact-us red__btn btn-anim">Связаться с&#160;нами</button>
+							<button id="modal-btn" class="footer__contact-us red__btn btn-anim">Связаться с&#160;нами</button>
 						</div>
 
 						<ul class="footer__endLine-wrapper">
@@ -657,7 +698,6 @@
 			</div>
 		</footer>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

@@ -60,22 +60,6 @@
 }
 //services services services services services services  services services 
 
-//swiper swiper swiper swiper swiper swiper swiper swiper
-.swiper {
-}
-.swiper__services {
-}
-.swiper-wrapper {
-}
-.swiper-wrapper__services {
-}
-.swiper-pagination__services {
-}
-.swiper-button-prev__services {
-}
-.swiper-button-next__services {
-}
-//swiper swiper swiper swiper swiper swiper swiper swiper
 
 //swiper__content swiper__content swiper__content swiper__content swiper__content
 .swiper-slide-active {
@@ -96,7 +80,7 @@
 
 .services__slide-inner {
 	max-width: 436px;
-	max-height: 424px;
+	height: 424px;
 	border-radius: 19px;
 
 	padding: 40px 30px 55px 30px;
@@ -106,12 +90,14 @@
 	flex-direction: column;
 	@include notebook {
 		max-width: clamp(15.625rem, -3.452rem + 29.81vw, 23.375rem); //374//250 //1440/1024
-		max-height: clamp(18.75rem, 5rem + 18.33vw, 21.5rem); //344/300 1440/1200
-		 padding:30px 15px 55px 15px
+		height: clamp(18.75rem, 5rem + 18.33vw, 21.5rem); //344/300 1440/1200
+		 padding:30px 15px 20px 15px
+	}
+	@include tablet {
+		 height: 270px;
 	}
 	@include mobile768 {
-		height:270px;
-		 padding:20px 15px 30px 15px;
+		 padding:20px 15px 15px 15px;
 	}
 
 }
@@ -132,7 +118,7 @@
 	font-size: 20px;
 	text-align: center;
 	
-	margin-bottom: 22px;
+	// margin-bottom: 22px;
 	line-height: 130%;
 	@include notebook {
 		 font-size: clamp(0.75rem, -0.173rem + 1.44vw, 1.125rem); //18/12 1440/1024
@@ -146,6 +132,7 @@
 	text-align: center;
 	line-height: 130%;
 	margin:20px 0 20px 0;
+	margin-top:auto;
 	@include notebook {
 		 font-size: clamp(0.938rem, 0.476rem + 0.72vw, 1.125rem);  //18/15 1440/1024
 	}
@@ -155,8 +142,7 @@
 
 
 }
-.services__item-price-text {
-}
+
 .services__item-price-cost {
 	margin-top: 10px;
 
@@ -169,6 +155,5 @@
 	}
 	}
 }
-.services__button {
-}
+
 //swiper__content swiper__content swiper__content swiper__content swiper__content 
