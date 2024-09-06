@@ -1,7 +1,7 @@
 @font-face {
-	font-family: PTSansCaption;
+	font-family: Molot;
 	font-display: swap;
-	src: url("../fonts/PTSansCaption-Regular.woff2") format("woff2"), url("../fonts/PTSansCaption-Regular.woff") format("woff");
+	src: url("../fonts/Molot.woff2") format("woff2"), url("../fonts/Molot.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -13,23 +13,23 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Molot;
+	font-family: PTSansCaption;
 	font-display: swap;
-	src: url("../fonts/Molot.woff2") format("woff2"), url("../fonts/Molot.woff") format("woff");
+	src: url("../fonts/PTSansCaption-Regular.woff2") format("woff2"), url("../fonts/PTSansCaption-Regular.woff") format("woff");
 	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: Verdana;
-	font-display: swap;
-	src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
-	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
 	font-family: Rubik;
 	font-display: swap;
 	src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: Verdana;
+	font-display: swap;
+	src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
